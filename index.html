@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
-    <meta property="og:image" content="https://salehkhalilmp.github.io/mermaid-test/index.html" />
+    <meta property="og:image" content="https://www.dicaspetz.com.br/wp-content/uploads/2021/03/piercing-para-cachorro-2.jpg" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/6.0.0/mermaid.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/6.0.0/mermaid.js"></script>
 </head>
@@ -24,6 +24,8 @@
     <canvas width="1000" height="800" />
     <script type="text/javascript" src="https://unpkg.com/canvg@3.0.4/lib/umd.js"></script>
     <script type="text/javascript">
+        let canvasExists = false;
+
         window.onload = () => {
             const canvas = document.querySelector('canvas');
             const ctx = canvas.getContext('2d');
@@ -33,6 +35,13 @@
 
             v.start();
         };
+        
+        setInterval(() => {
+            if (document.querySelector('canvas') && !canvasExists) {
+                console.log(document.querySelector('canvas').toDataURL());
+                canvasExists = true;
+            }
+        }, 100)
     </script>
 </body>
 </html>
