@@ -38,7 +38,9 @@
         
         setInterval(() => {
             if (document.querySelector('canvas') && !canvasExists) {
-                console.log(document.querySelector('canvas').toDataURL());
+                document.querySelector('canvas').toBlob(blob => {
+                    console.log(blob)
+                })
                 canvasExists = true;
             }
         }, 100)
