@@ -1,7 +1,7 @@
 ```mermaid
 sequenceDiagram
     participant Fabio Landi
-    participant Bob
+    participant Nayron
     Alice->>John: Hello John, how are you?
     loop Healthcheck
         John->>John: Fight against hypochondria
