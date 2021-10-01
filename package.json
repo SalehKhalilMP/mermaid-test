@@ -1,0 +1,25 @@
+{
+  "name": "teste",
+  "version": "1.0.0",
+  "description": "1. Carregar HTML 2. Obter conteúdo em base64 3. Gerar imagem com base no base64 4. Usar pre-commit para atualizar a imagem a cada alteração",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalehKhalilMP/mermaid-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SalehKhalilMP/mermaid-test/issues"
+  },
+  "homepage": "https://github.com/SalehKhalilMP/mermaid-test#readme",
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^8.13.0",
+    "husky": "^7.0.2"
+  }
+}
