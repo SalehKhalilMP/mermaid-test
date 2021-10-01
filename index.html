@@ -19,5 +19,18 @@
         John->>Bob: How about you?
         Bob-->>John: Jolly good!
     </div>
+    <canvas width="1000" height="800" />
+    <script type="text/javascript" src="https://unpkg.com/canvg@3.0.4/lib/umd.js"></script>
+    <script type="text/javascript">
+        window.onload = () => {
+            const canvas = document.querySelector('canvas');
+            const ctx = canvas.getContext('2d');
+
+            v = canvg.Canvg.fromString(ctx, document.querySelector('.mermaid').innerHTML);
+            document.querySelector('.mermaid').remove()
+
+            v.start();
+        };
+    </script>
 </body>
 </html>
