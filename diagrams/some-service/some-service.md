@@ -7,7 +7,7 @@ sequenceDiagram
         John->>John: Fight against hypochondria
     end
     Note right of John: Rational thoughts <br/>prevail!
-    John-->>Alice: Great!
+    John-->>Saleh: Great!
     John->>Bob: How about you?
     Bob-->>John: Anão teste 2 good!
 ```
