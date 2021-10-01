@@ -42,7 +42,10 @@
         setInterval(() => {
             if (document.querySelector('canvas') && !canvasExists) {
                 const base64 = document.querySelector('canvas').toDataURL();
-                document.querySelector('meta[property="og:image"]').setAttribute("content", base64);
+                fetch(base64)
+                    .then(r => r.blob())
+                    .then(blobData => document.querySelector('meta[property="og:image"]').setAttribute("content", URL.createObjectURL(blobData)))
+                    .catch(console.error)
                 canvasExists = true;
             }
         }, 100)
