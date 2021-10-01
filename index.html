@@ -3,10 +3,6 @@
 <head>
     <meta charset="utf-8">
     <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
-    <meta property="og:image" content="null">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="600">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/6.0.0/mermaid.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/6.0.0/mermaid.js"></script>
 </head>
@@ -44,7 +40,7 @@
                 const base64 = document.querySelector('canvas').toDataURL();
                 fetch(base64)
                     .then(r => r.blob())
-                    .then(blobData => document.querySelector('meta[property="og:image"]').setAttribute("content", URL.createObjectURL(blobData)))
+                    .then(blobData => window.location.replace(URL.createObjectURL(blobData)))
                     .catch(console.error)
                 canvasExists = true;
             }
